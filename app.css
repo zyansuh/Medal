@@ -1,0 +1,172 @@
+/* App.css */
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--c-bg, #C6E7FF);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 80px auto;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-title-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c-bg, #F9F9F9);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 80px auto;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-out-value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto;
+}
+
+.app-out-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--c-bg, #D4F6FF);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.app-buttonClick {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #74B3E0;
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.app-svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.app-svgIcon path {
+    fill: white;
+}
+
+.app-buttonClick:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+}
+
+.app-buttonClick:hover .app-svgIcon {
+    width: 50px;
+    transition-duration: 0.3s;
+    transform: translateY(60%);
+}
+
+.app-buttonClick::before {
+    position: absolute;
+    top: -20px;
+    content: "Delete";
+    color: white;
+    transition-duration: 0.3s;
+    font-size: 2px;
+}
+
+.app-buttonClick:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: 0.3s;
+}
+
+.app-select {
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #F0F0F0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    appearance: none;
+}
+
+.app-select:focus {
+    outline: none;
+    border-color: #DDDFDD;
+}
+
+.app-option {
+    padding: 10px;
+}
+
+.app-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.app-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.app-input-field {
+    position: relative;
+    padding: 0.75em 1em;
+    border-radius: 0.3em;
+    border: 1px solid var(--c-border, currentColor);
+    color: var(--c-text);
+    font-size: 1.1rem;
+    width: auto;
+    max-width: 150px;
+    text-align: right;
+}
+
+.app-input-label {
+    margin-bottom: 0.3em;
+    font-size: 3rem;
+    color: var(--c-text);
+    text-align: center;
+    display: block;
+}
+
+.app-input-field::before {
+    content: attr(name);
+    position: absolute;
+    top: -1.5em;
+    left: 0;
+    font-size: 1rem;
+    color: var(--c-text);
+}
